@@ -26,7 +26,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    coffeMenu.innerHTML = renderCoffees(filteredCoffees);
+    coffeeMenu.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
