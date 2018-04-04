@@ -2,5 +2,19 @@ li {
     list-style-type: none;
 }
 
+.form{
+    float: left;
+}
+
+.container-fluid {
+
+}
+
+.col-6 {
 
 
+}
+.menu {
+
+    clear: right;
+}
