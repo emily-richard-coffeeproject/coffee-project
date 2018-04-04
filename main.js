@@ -76,30 +76,36 @@ function myFunction() {
         }
     }
 }
+//
+// var newCoffeeName = document.getElementById("newInput");
+// var newCoffeeRoast = document.querySelector("#add-coffee");
 
-var newCoffeeName = document.getElementById("newInput");
-var newCoffeeRoast = document.getElementById("add-coffee");
 
-var newCoffeeObject = {};
 
 
 
 // coffees.push(addCoffee(newCoffeeName,newCoffeeRoast));
+// var listener = function() {
+//
+// };
 
-function addCoffee(newCoffeeName, newCoffeeRoast) {
-    return newCoffeeObject = {
+
+function addCoffee() {
+    var newCoffeeObject = {};
+    var newSelectedRoast = document.querySelector("#add-coffee").value;
+    var newCoffeeName = document.querySelector("#newInput").value;
+    newCoffeeObject = {
+        id: coffees.length+1,
         name: newCoffeeName,
-        roast: newCoffeeRoast
-    };
+        roast: newSelectedRoast
+    };coffees.push(newCoffeeObject);
 }
 
+// submitNewCoffeeButton.addEventListener('click', listener, false);
 
 
-var listener = function() {
-    coffees.push(addCoffee(newCoffeeName, newCoffeeRoast))
-};
 
 
-submitNewCoffeeButton.addEventListener('click', listener, false);
+
 
 console.log(coffees);

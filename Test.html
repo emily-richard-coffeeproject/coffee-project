@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing</title>
+</head>
+<body>
+<script>
+
+
+    var books = [
+        createBook("The Hitchiker's Guide to the Galaxy", "Douglas Adams"),
+        createBook("An Enquiry Concerning Human Understanding", "David Hume"),
+        createBook("Leviathan Wakes","James Corey"),
+        createBook("Contact","Carl Sagan"),
+        createBook("The Dispossessed", "Ursula LeGuin")
+    ];
+
+
+    books.forEach(function(element,index){
+        console.log("Book # "+ (index + 1),element.title);
+        console.log("Author: "+ element.author.firstName + " " + element.author.lastName);
+    });
+
+    /**
+     * Bonus:
+     * - Create a function named `createBook` that accepts a title and author
+     *   name and returns a book object with the properties described
+     *   previously. Refactor your code that creates the books array to instead
+     *   use your function.
+     * - Create a function named `showBookInfo` that accepts a book object and
+     *   outputs the information described above. Refactor your loop to use your
+     *   `showBookInfo` function.
+     */
+
+    function createBook(title, author) {
+
+        var name = author.split(" ");
+        var book ={};
+        return book={title: title, author: {
+                firstName: name[0],
+                lastName: name[1]
+            }
+        };
+    }
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
