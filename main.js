@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-sm-6">';
-    html += '<li>' +'<h1>' + coffee.name + ' <small>' + coffee.roast + ' </small>' + '</h1>';
+    html += '<li>' +'<h1>' + coffee.name + '<small>' + coffee.roast + ' </small>' + '</h1>';
     html += '</li>';
     html += '</div>';
 
@@ -24,6 +24,8 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } if (selectedRoast === "all") {
+            filteredCoffees.push(coffee)
         }
     });
     coffeeMenu.innerHTML = renderCoffees(filteredCoffees);
@@ -50,6 +52,7 @@ var coffees = [
 var coffeeMenu = document.querySelector('#coffee-menu');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var submitNewCoffeeButton = document.querySelector('#submit-new');
 
 coffeeMenu.innerHTML = renderCoffees(coffees);
 
@@ -73,3 +76,30 @@ function myFunction() {
         }
     }
 }
+
+var newCoffeeName = document.getElementById("newInput");
+var newCoffeeRoast = document.getElementById("add-coffee");
+
+var newCoffeeObject = {};
+
+
+
+// coffees.push(addCoffee(newCoffeeName,newCoffeeRoast));
+
+function addCoffee(newCoffeeName, newCoffeeRoast) {
+    return newCoffeeObject = {
+        name: newCoffeeName,
+        roast: newCoffeeRoast
+    };
+}
+
+
+
+var listener = function() {
+    coffees.push(addCoffee(newCoffeeName, newCoffeeRoast))
+};
+
+
+submitNewCoffeeButton.addEventListener('click', listener, false);
+
+console.log(coffees);

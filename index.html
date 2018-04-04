@@ -10,31 +10,46 @@
 </head>
 <body>
     <h1 class="container-fluid" style="text-align:center;">Coffee!</h1>
-
     <hr>
     <div class="container-fluid row">
-    <div class="col">
-        <ul class= "row" id="coffee-menu">
-
-        </ul>
-    </div>
-<div class="col">
-    <form class= "col form">
-        <div class="form-group form-group-lg">
-        <label for="roast-selection">Roast</label>
-        <select class="form-control" id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
+        <div class="col">
+            <ul class= "row" id="coffee-menu">
+            </ul>
         </div>
-        <div class="form-group form-group-lg">
-        <label for ="myInput">Coffee Name</label>
-        <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names...">
-        </div>
-        <button id="submit" type="button" class="btn btn-primary btn-block">Submit</button>
-
-    </form>
+        <div class="col">
+            <form class= "col form">
+                <div class="form-group form-group-lg">
+                    <label for="roast-selection">Roast</label>
+                    <select class="form-control" id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                        <option>all</option>
+                    </select>
+                </div>
+                <div class="form-group form-group-lg">
+                    <label for ="myInput">Coffee Name</label>
+                    <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names...">
+                </div>
+                <button id="submit" type="button" class="btn btn-primary btn-block">Submit</button>
+            </form>
+            <hr>
+            <h1 class="text-center">Add a Coffee</h1>
+            <form class= "col form">
+                <div class="form-group form-group-lg">
+                    <label for="add-coffee">Roast</label>
+                    <select class="form-control" id="add-coffee">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+                <div class="form-group form-group-lg">
+                    <label for ="myInput">Coffee Name</label>
+                    <input class="form-control" type="text" id="newInput" onkeyup="myFunction()" placeholder="Search for names...">
+                </div>
+                <button id="submit-new" type="button" class="btn btn-primary btn-block">Submit</button>
+            </form>
     </div>
     </div>
     <script src="main.js"></script>
