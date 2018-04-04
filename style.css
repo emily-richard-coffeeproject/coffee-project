@@ -1,3 +1,16 @@
+
+/*body {*/
+  /*max-width: 80%;*/
+    /*margin: auto;*/
+
+/*}*/
+
+
+hr {
+    padding-bottom: 20px;
+}
+
+
 li {
     list-style-type: none;
     padding-bottom: 10px;
@@ -9,9 +22,53 @@ h1 small {
 
 }
 
+.sub-head {
+
+    color: #71331F;
+}
+
+.menuItems {
+    font-size: 40px;
+    color: #71331F;
+
+}
+
+body {
+
+    background-image: url("img/seamless_paper_texture.png");
+}
+
 li small {
     margin-left: 5px;
 }
 
+#headerText {
+    font-family: 'Lobster', cursive;
+    color: blanchedalmond;
+    font-size: 75px;
+    font-weight: bold;
+    vertical-align: middle;
 
+    text-align: center;
+    padding-top: 20px;
+    text-shadow:  3px 3px #301E19;
+}
+
+#header {
+    background-image: url("img/coffee_beans.png");
+    height: 150px;
+    margin-bottom: 25px;
+
+
+}
+
+button {
+
+    background-color: #5D4A44 !important;
+    color: blanchedalmond !important;
+}
+
+#main {
+    font-family:"Questrial", sans-serif;
+}
 

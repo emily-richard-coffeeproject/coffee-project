@@ -6,18 +6,22 @@
     <title>Fancy Coffee Co.</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Questrial" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="container-fluid" style="text-align:center;">Coffee!</h1>
-    <hr>
-    <div class="container-fluid row">
+<div id="header" class="container-fluid">
+    <h1 id="headerText">Fancy Coffee!</h1>
+</div>
+    <div id="main" class="container-fluid row">
         <div class="col">
             <ul class= "row" id="coffee-menu">
             </ul>
         </div>
         <div class="col">
             <form class= "col form">
+                <h1 class="text-center sub-head">Select a Coffee</h1>
                 <div class="form-group form-group-lg">
                     <label for="roast-selection">Roast</label>
                     <select class="form-control" id="roast-selection">
@@ -31,10 +35,10 @@
                     <label for ="myInput">Coffee Name</label>
                     <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names...">
                 </div>
-                <button id="submit" type="button" class="btn btn-primary btn-block">Submit</button>
+                <button id="submit" type="button" class="btn btn-light btn-block">Submit</button>
             </form>
             <hr>
-            <h1 class="text-center">Add a Coffee</h1>
+            <h1 class="text-center sub-head">Add a Coffee</h1>
             <form class= "col form">
                 <div class="form-group form-group-lg">
                     <label for="add-coffee">Roast</label>
@@ -48,7 +52,7 @@
                     <label for ="newInput">Coffee Name</label>
                     <input class="form-control" type="text" id="newInput"  placeholder="Enter new coffee...">
                 </div>
-                <button id="submit-new" type="button" class="btn btn-primary btn-block" onclick="addCoffee()">Submit</button>
+                <button id="submit-new" type="button" class="btn btn-light btn-block" onclick="addCoffee()">Submit</button>
             </form>
     </div>
     </div>
