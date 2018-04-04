@@ -88,6 +88,14 @@ function myFunction() {
 // var listener = function() {
 //
 // };
+function updateWithNewCoffees() {
+    // var selectedRoast = roastSelection.value;
+    var newCoffeeList = [];
+    coffees.forEach(function(coffee) {
+            newCoffeeList.push(coffee)
+    });
+    coffeeMenu.innerHTML = renderCoffees(newCoffeeList);
+}
 
 
 function addCoffee() {
@@ -98,14 +106,14 @@ function addCoffee() {
         id: coffees.length+1,
         name: newCoffeeName,
         roast: newSelectedRoast
-    };coffees.push(newCoffeeObject);
+    };
+    coffees.push(newCoffeeObject);
+    updateWithNewCoffees();
 }
 
-// submitNewCoffeeButton.addEventListener('click', listener, false);
 
 
 
 
 
 
-console.log(coffees);
