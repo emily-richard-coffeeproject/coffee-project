@@ -77,21 +77,22 @@ function myFunction() {
     }
 }
 
-// function capitalize(input) {
-//     input = input.toString();
-//     var first = input[0].toUpperCase();
-//     var rest = input.substring(1).toLowerCase();
-//     return first + rest;
-// }
-
 function capitalize(input) {
-    var inputArray = input.split(" ");
-    for (var i = 0; i < inputArray.length; i ++) {
-        var first = i[0].toUpperCase();
-        var rest = i.substring(1).toLowerCase();
-        return first + rest;
-    }
+    input = input.toString();
+    var first = input[0].toUpperCase();
+    var rest = input.substring(1).toLowerCase();
+    return first + rest;
 }
+
+function capitalizeEachWord(input) {
+    var inputArray = input.split(" ");
+    var output = "";
+    inputArray.forEach(function(word){
+        output += " " + capitalize(word);
+    });
+    return output;
+}
+
 
 function updateWithNewCoffees() {
     // var selectedRoast = roastSelection.value;
@@ -106,7 +107,7 @@ function updateWithNewCoffees() {
 function addCoffee() {
     var newCoffeeObject = {};
     var newSelectedRoast = document.querySelector("#add-coffee").value;
-    var newCoffeeName = capitalize(document.querySelector("#newInput").value);
+    var newCoffeeName = capitalizeEachWord(document.querySelector("#newInput").value);
     newCoffeeObject = {
         id: coffees.length+1,
         name: newCoffeeName,
