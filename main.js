@@ -2,8 +2,8 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<h1>' + coffee.name + '</h1>';
-    html += '<p>' + coffee.roast + '</p>';
+    html += '<li>' +'<h1>' + coffee.name + '</h1>';
+    html += '<p>' + coffee.roast + '</p>' + '</li>';
     html += '</div>';
 
     return html;
@@ -54,3 +54,22 @@ var roastSelection = document.querySelector('#roast-selection');
 coffeeMenu.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, h1, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("coffee-menu");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        h1 = li[i].getElementsByTagName("h1")[0];
+        if (h1.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
