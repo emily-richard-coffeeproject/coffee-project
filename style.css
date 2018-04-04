@@ -1,20 +1,14 @@
 li {
     list-style-type: none;
+    padding-bottom: 10px;
 }
 
-.form{
-    float: left;
-}
-
-.container-fluid {
+h1 small {
+    font-size: 20px;
+    color: #919191;
 
 }
 
-.col-6 {
 
 
-}
-.menu {
 
-    clear: right;
-}

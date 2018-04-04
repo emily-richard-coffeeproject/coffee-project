@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fancy Coffee Co.</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
@@ -12,21 +13,27 @@
 
     <hr>
     <div class="container-fluid row">
-    <div class="col menu">
-        <ul id="coffee-menu">
+    <div class="col">
+        <ul class= "row" id="coffee-menu">
 
         </ul>
     </div>
 <div class="col">
     <form class= "col form">
-        <label for="roast-selection"></label>
-        <select id="roast-selection" class="">
+        <div class="form-group form-group-lg">
+        <label for="roast-selection">Roast</label>
+        <select class="form-control" id="roast-selection">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+        </div>
+        <div class="form-group form-group-lg">
+        <label for ="myInput">Coffee Name</label>
+        <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names...">
+        </div>
         <button id="submit" type="button" class="btn btn-primary btn-block">Submit</button>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names...">
+
     </form>
     </div>
     </div>

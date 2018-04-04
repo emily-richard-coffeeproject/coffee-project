@@ -1,9 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    html += '<li>' +'<h1>' + coffee.name + '</h1>';
-    html += '<p>' + coffee.roast + '</p>' + '</li>';
+    var html = '<div class="coffee col-sm-6">';
+    html += '<li>' +'<h1>' + coffee.name + ' <small>' + coffee.roast + ' </small>' + '</h1>';
+    html += '</li>';
     html += '</div>';
 
     return html;
@@ -33,7 +33,7 @@ function updateCoffees(e) {
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
+    {id: 3, name: 'Cinnamon ', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
     {id: 5, name: 'American', roast: 'medium'},
     {id: 6, name: 'Breakfast', roast: 'medium'},
