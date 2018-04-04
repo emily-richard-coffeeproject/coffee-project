@@ -76,18 +76,23 @@ function myFunction() {
         }
     }
 }
-//
-// var newCoffeeName = document.getElementById("newInput");
-// var newCoffeeRoast = document.querySelector("#add-coffee");
 
+// function capitalize(input) {
+//     input = input.toString();
+//     var first = input[0].toUpperCase();
+//     var rest = input.substring(1).toLowerCase();
+//     return first + rest;
+// }
 
+function capitalize(input) {
+    var inputArray = input.split(" ");
+    for (var i = 0; i < inputArray.length; i ++) {
+        var first = i[0].toUpperCase();
+        var rest = i.substring(1).toLowerCase();
+        return first + rest;
+    }
+}
 
-
-
-// coffees.push(addCoffee(newCoffeeName,newCoffeeRoast));
-// var listener = function() {
-//
-// };
 function updateWithNewCoffees() {
     // var selectedRoast = roastSelection.value;
     var newCoffeeList = [];
@@ -101,7 +106,7 @@ function updateWithNewCoffees() {
 function addCoffee() {
     var newCoffeeObject = {};
     var newSelectedRoast = document.querySelector("#add-coffee").value;
-    var newCoffeeName = document.querySelector("#newInput").value;
+    var newCoffeeName = capitalize(document.querySelector("#newInput").value);
     newCoffeeObject = {
         id: coffees.length+1,
         name: newCoffeeName,
@@ -110,6 +115,8 @@ function addCoffee() {
     coffees.push(newCoffeeObject);
     updateWithNewCoffees();
 }
+
+
 
 
 
