@@ -72,3 +72,28 @@ button {
     font-family:"Questrial", sans-serif;
 }
 
+a:link {
+    color: #2B120E;
+
+}
+
+/* visited link */
+a:visited {
+    color: #2B120E;
+}
+
+/* mouse over link */
+a:hover {
+    color: blanchedalmond;
+}
+
+/* selected link */
+a:active {
+    color: blanchedalmond;
+}
+
+.nav-item, a {
+    background-color: #7C5D58 !important;
+    border: #301E19 1px solid;
+
+}
